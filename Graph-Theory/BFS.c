@@ -38,9 +38,6 @@ int main()
 
     for (int i = 0; i < total; i++)
     {
-        /**
-         * initially all vertices are un-visited.
-         */
         visited[i] = 0;
     }
 
