@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
- 
+
 #define infinity 9999
 #define MAX 20
-  int G[MAX][MAX], spanning[MAX][MAX], n;
-  int prims();
-  int main()
+int G[MAX][MAX], spanning[MAX][MAX], n;
+int prims();
+int main()
 {
     int i, j, total_cost;
     printf("Enter no. of vertices:");
@@ -25,7 +25,7 @@
     printf("\n\nTotal cost of spanning tree=%d", total_cost);
     return 0;
 }
-  int prims()
+int prims()
 {
     int cost[MAX][MAX];
     int u, v, min_distance, distance[MAX], from[MAX];
