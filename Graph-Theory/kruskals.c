@@ -9,10 +9,11 @@ int uni(int, int);
 void main()
 
 {
-    printf("\n\tImplementation of Kruskal's Algorithm\n");
-    printf("\nEnter the no. of vertices:");
+    printf("\nEnter the no. of vertices: ");
     scanf("%d", &n);
     printf("\nEnter the cost adjacency matrix:\n");
+    // for example: 0 3 6 0 0 0 0 3 0 2 4 0 0 0 6 2 0 1 4 2 0 0 4 1 0 2 0 4 0 0 4 2 0 2 1 0 0 2 0 2 0 1 0 0 0 4 1 1 0
+
     for (i = 1; i <= n; i++)
 
     {

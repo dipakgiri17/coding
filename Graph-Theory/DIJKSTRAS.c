@@ -76,6 +76,9 @@ int main()
 
     n = 7;
 
+    printf("Enter the adjacency matrix: \n");
+    // for example: 0 3 6 0 0 0 0 3 0 2 4 0 0 0 6 2 0 1 4 2 0 0 4 1 0 2 0 4 0 0 4 2 0 2 1 0 0 2 0 2 0 1 0 0 0 4 1 1 0
+
     for (int i = 0; i < n; i++)
     {
 
@@ -90,5 +93,4 @@ int main()
     Dijkstra(Graph, n, u);
 
     return 0;
-    
 }

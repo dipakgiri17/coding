@@ -7,7 +7,7 @@ int graph[size][size], visited[size], total = 0;
 void BFS(int vertex)
 {
     printf("%d\t", vertex);
-    visited[vertex] = 1; // this vertex is now also visited
+    visited[vertex] = 1;
 
     for (int j = 0; j < total; j++)
     {
@@ -21,10 +21,11 @@ void BFS(int vertex)
 int main()
 {
 
-    printf("Enter the total number of vertex: ");
+    printf("\nEnter the total number of vertex: ");
     scanf("%d", &total);
 
-    printf("Enter the adjacency matrix: ");
+    printf("\nEnter the adjacency matrix: \n");
+    // for example: 0 1 1 1 0 1 1 0 0 1 1 1 0 0 1 1 0 0 0 0 0 0 1 0 0
 
     for (int i = 0; i < total; i++)
     {
@@ -33,8 +34,6 @@ int main()
             scanf("%d", &graph[i][j]);
         }
     }
-
-    printf("\n");
 
     for (int i = 0; i < total; i++)
     {

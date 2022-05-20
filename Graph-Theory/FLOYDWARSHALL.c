@@ -3,69 +3,74 @@
 #define INF 9999
 #define nV 4
 
-void PrintGraph(int Graph[][nV])
+void PrintGraph(int graph[][nV])
 {
     for (int i = 0; i < nV; i++)
     {
         for (int j = 0; j < nV; j++)
         {
-            if (Graph[i][j] == INF)
+            if (graph[i][j] == INF)
             {
                 printf("%4s ", "INF"); // prints total 4 charecters including "INF"
             }
             else
             {
-                printf("%4d ", Graph[i][j]); // prints total 4 digits including the value.
+                printf("%4d ", graph[i][j]); // prints total 4 digits including the value.
             }
         }
         printf("\n");
     }
 }
 
-void FloyeWarshall(int Graph[][nV])
+void FloyeWarshall(int graph[][nV])
 {
 
-    int D[nV][nV], i, j, k;
+    int dist[nV][nV], i, j, k;
 
     for (i = 0; i < nV; i++)
     {
         for (j = 0; j < nV; j++)
         {
-            D[i][j] = Graph[i][j];
+            dist[i][j] = graph[i][j];
         }
     }
 
-    for (i = 0; i < nV; i++)
+    for (k = 0; k < nV; k++)
     {
-        for (j = 0; j < nV; j++)
+        for (i = 0; i < nV; i++)
         {
-            for (k = 0; k < nV; k++)
+            for (j = 0; j < nV; j++)
             {
-
-                if (D[i][k] + D[k][j] < D[i][j])
+                if (dist[i][k] + dist[k][j] < dist[i][j])
                 {
-                    D[i][j] = D[i][k] + D[k][j];
+                    dist[i][j] = dist[i][k] + dist[k][j];
                 }
             }
         }
     }
 
-    printf("-----------------------------\n");
-    PrintGraph(D);
+    printf("\n");
+    PrintGraph(dist);
 }
 
 int main()
 {
+    int graph[nV][nV];
 
-    int Graph[nV][nV] = {
-        {0, INF, -2, INF},
-        {4, 0, 3, INF},
-        {INF, INF, 0, 2},
-        {INF, -1, INF, 0},
-    };
+    printf("Enter the Adjacency matrix: \n");
+    // Example of an adjacency metrix: 0 9999 -2 9999 4 0 3 9999 9999 9999 0 2 9999 -1 9999 0
+    for (int i = 0; i < nV; i++)
+    {
 
-    printf("-----------------------------\n");
-    PrintGraph(Graph);
-    FloyeWarshall(Graph);
+        for (int j = 0; j < nV; j++)
+        {
+            scanf("%d", &graph[i][j]);
+        }
+    }
+
+    printf("\n");
+    PrintGraph(graph);
+
+    FloyeWarshall(graph);
     return 0;
 }

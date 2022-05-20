@@ -46,6 +46,7 @@ int main()
     scanf("%d", &total);
 
     printf("Enter the Adjacency matrix: \n");
+    // for example: 0 1 1 1 0 1 1 0 0 1 1 1 0 0 1 1 0 0 0 0 0 0 1 0 0
 
     for (int i = 0; i < total; i++)
     {
