@@ -1,8 +1,0 @@
-{
-    "files.associations": {
-        "stllock.h": "c",
-        "http.h": "c",
-        "netcon.h": "c",
-        "windows.h": "c"
-    }
-}
