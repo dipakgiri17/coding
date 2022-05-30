@@ -36,7 +36,10 @@ int main()
         printf("\n");
     }
 
+    printf("BFS Traversal is: ");
+
     /* step 4: call function BFS(0) */
+    BFS(0);
 
     return 0;
 }
@@ -47,7 +50,7 @@ void BFS(int vertex)
 {
 
     /* step 6: print the current visiting vertex */
-    printf("%d\t->\t", vertex);
+    printf("%d ", vertex);
 
     /* step 7: set the vertex as visited */
     visited[vertex] = 1;
