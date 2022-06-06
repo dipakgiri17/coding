@@ -1,0 +1,15 @@
+; division of two 8-bit number.
+
+MVI A, 14
+
+MVI B, 02
+MVI C, 00
+
+LOOP: INR C
+SUB B 
+JNZ LOOP
+
+LXI H, 0x8500
+MOV M, C
+
+HLT
