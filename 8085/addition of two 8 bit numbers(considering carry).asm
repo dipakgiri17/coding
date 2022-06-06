@@ -14,3 +14,5 @@ INX H
 MOV M, A ; Store carry in Memory location 8001
 
 HLT ; Terminate the program.
+
+; if we add FF and FF the result should be FE with carry 1.
